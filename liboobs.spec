@@ -7,6 +7,7 @@ License:	GPL/LGPL/BSD/BSD-like/other license name here)
 Group:		Libraries
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/liboobs/0.2/%{name}-%{version}.tar.bz2
 # Source0-md5:	20a9ffc401c0da4d9119ddf250931a07
+Patch0:		%{name}-dbus.patch
 URL:		http://www.gnome.org/
 BuildRequires:	dbus-glib-devel >= 0.71
 BuildRequires:	gtk-doc >= 1.7
@@ -49,6 +50,7 @@ Statyczna biblioteka liboobs.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %configure \
