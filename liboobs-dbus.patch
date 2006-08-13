@@ -1,0 +1,11 @@
+diff -urN aaa/liboobs-0.2.0/src/oobs-session.c liboobs-0.2.0/src/oobs-session.c
+--- aaa/liboobs-0.2.0/src/oobs-session.c	2006-05-17 03:23:51.000000000 +0200
++++ liboobs-0.2.0/src/oobs-session.c	2006-08-13 15:48:05.270939000 +0200
+@@ -150,7 +150,6 @@
+ 
+       unregister_objects_list (priv);
+ 
+-      dbus_connection_disconnect (priv->connection);
+       dbus_connection_close (priv->connection);
+       dbus_connection_unref (priv->connection);
+     }
