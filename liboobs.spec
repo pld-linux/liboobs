@@ -48,6 +48,18 @@ Static liboobs library.
 %description static -l pl
 Statyczna biblioteka liboobs.
 
+%package apidocs
+Summary:	liboobs API documentation
+Summary(pl):	Dokumentacja API liboobs
+Group:		Documentation
+Requires:	gtk-doc-common
+
+%description apidocs
+liboobs API documentation.
+
+%description apidocs -l pl
+Dokumentacja API liboobs.
+
 %prep
 %setup -q
 %patch0 -p1
@@ -81,8 +93,11 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/lib*.la
 %{_includedir}/%{name}-1.0
 %{_pkgconfigdir}/*.pc
-%{_gtkdocdir}/%{name}
 
 %files static
 %defattr(644,root,root,755)
 %{_libdir}/lib*.a
+
+%files apidocs
+%defattr(644,root,root,755)
+%{_gtkdocdir}/%{name}
