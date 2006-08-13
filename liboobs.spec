@@ -14,10 +14,14 @@ BuildRequires:	system-tools-backends >= 1.9.3
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Liboobs is a wrapping library to the System Tools Backends. It provides easy to access GObjects to system configuration details, like users, groups and network interfaces.
+Liboobs is a wrapping library to the System Tools Backends. It
+provides easy to access GObjects to system configuration details, like
+users, groups and network interfaces.
 
 %description -l pl
-Liboobs jest bibliotek± opakowywuj±c± dla System Tools Backends. Dostarcza ³atwe interfejsy GObjects dla szczegó³ów konfiguracyjnych, takich jak u¿ytkownicy, grupy, czy interfejsy sieciowe.
+Liboobs jest bibliotek± opakowywuj±c± dla System Tools Backends.
+Dostarcza ³atwe interfejsy GObjects dla szczegó³ów konfiguracyjnych,
+takich jak u¿ytkownicy, grupy, czy interfejsy sieciowe.
 
 %package devel
 Summary:	Header files for liboobs library
