@@ -1,18 +1,18 @@
 Summary:	Wrapping library to the System Tools Backends
 Summary(pl):	Biblioteka opakowywuj±ca dla System Tools Backends
 Name:		liboobs
-Version:	0.5.0
+Version:	0.6.0
 Release:	1
 License:	LGPL v2+
 Group:		Libraries
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/liboobs/0.5/%{name}-%{version}.tar.bz2
-# Source0-md5:	819cb9b3524f740afa325814603261d1
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/liboobs/0.6/%{name}-%{version}.tar.bz2
+# Source0-md5:	e78751943aa5eb160834a6278cc7fa18
 URL:		http://www.gnome.org/
 BuildRequires:	dbus-glib-devel >= 0.71
 BuildRequires:	glib2-devel >= 1:2.12.4
 BuildRequires:	gtk-doc >= 1.7
 BuildRequires:	pkgconfig
-BuildRequires:	system-tools-backends >= 1.9.6
+BuildRequires:	system-tools-backends >= 1.9.7
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -32,7 +32,7 @@ Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	dbus-glib-devel >= 0.71
 Requires:	glib2-devel >= 1:2.12.4
-Requires:	system-tools-backends >= 1.9.6
+Requires:	system-tools-backends >= 1.9.7
 
 %description devel
 Header files for liboobs library.
