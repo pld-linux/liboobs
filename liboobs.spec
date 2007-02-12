@@ -1,5 +1,5 @@
 Summary:	Wrapping library to the System Tools Backends
-Summary(pl):	Biblioteka opakowywuj±ca dla System Tools Backends
+Summary(pl.UTF-8):   Biblioteka opakowywujƒÖca dla System Tools Backends
 Name:		liboobs
 Version:	0.6.0
 Release:	1
@@ -20,14 +20,14 @@ Liboobs is a wrapping library to the System Tools Backends. It
 provides easy to access GObjects to system configuration details, like
 users, groups and network interfaces.
 
-%description -l pl
-Liboobs jest bibliotek± opakowywuj±c± dla System Tools Backends.
-Dostarcza ≥atwe interfejsy GObjects dla szczegÛ≥Ûw konfiguracyjnych,
-takich jak uøytkownicy, grupy, czy interfejsy sieciowe.
+%description -l pl.UTF-8
+Liboobs jest bibliotekƒÖ opakowywujƒÖcƒÖ dla System Tools Backends.
+Dostarcza ≈Çatwe interfejsy GObjects dla szczeg√≥≈Ç√≥w konfiguracyjnych,
+takich jak u≈ºytkownicy, grupy, czy interfejsy sieciowe.
 
 %package devel
 Summary:	Header files for liboobs library
-Summary(pl):	Pliki nag≥Ûwkowe biblioteki liboobs
+Summary(pl.UTF-8):   Pliki nag≈Ç√≥wkowe biblioteki liboobs
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	dbus-glib-devel >= 0.71
@@ -37,31 +37,31 @@ Requires:	system-tools-backends >= 1.9.7
 %description devel
 Header files for liboobs library.
 
-%description devel -l pl
-Pliki nag≥Ûwkowe biblioteki liboobs.
+%description devel -l pl.UTF-8
+Pliki nag≈Ç√≥wkowe biblioteki liboobs.
 
 %package static
 Summary:	Static liboobs library
-Summary(pl):	Statyczna biblioteka liboobs
+Summary(pl.UTF-8):   Statyczna biblioteka liboobs
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static liboobs library.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Statyczna biblioteka liboobs.
 
 %package apidocs
 Summary:	liboobs API documentation
-Summary(pl):	Dokumentacja API liboobs
+Summary(pl.UTF-8):   Dokumentacja API liboobs
 Group:		Documentation
 Requires:	gtk-doc-common
 
 %description apidocs
 liboobs API documentation.
 
-%description apidocs -l pl
+%description apidocs -l pl.UTF-8
 Dokumentacja API liboobs.
 
 %prep
