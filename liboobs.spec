@@ -1,5 +1,5 @@
 Summary:	Wrapping library to the System Tools Backends
-Summary(pl.UTF-8):   Biblioteka opakowywująca dla System Tools Backends
+Summary(pl.UTF-8):	Biblioteka opakowywująca dla System Tools Backends
 Name:		liboobs
 Version:	0.6.0
 Release:	1
@@ -27,7 +27,7 @@ takich jak użytkownicy, grupy, czy interfejsy sieciowe.
 
 %package devel
 Summary:	Header files for liboobs library
-Summary(pl.UTF-8):   Pliki nagłówkowe biblioteki liboobs
+Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki liboobs
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	dbus-glib-devel >= 0.71
@@ -42,7 +42,7 @@ Pliki nagłówkowe biblioteki liboobs.
 
 %package static
 Summary:	Static liboobs library
-Summary(pl.UTF-8):   Statyczna biblioteka liboobs
+Summary(pl.UTF-8):	Statyczna biblioteka liboobs
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
@@ -54,7 +54,7 @@ Statyczna biblioteka liboobs.
 
 %package apidocs
 Summary:	liboobs API documentation
-Summary(pl.UTF-8):   Dokumentacja API liboobs
+Summary(pl.UTF-8):	Dokumentacja API liboobs
 Group:		Documentation
 Requires:	gtk-doc-common
 
