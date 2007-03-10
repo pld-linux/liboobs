@@ -1,18 +1,21 @@
 Summary:	Wrapping library to the System Tools Backends
 Summary(pl.UTF-8):	Biblioteka opakowywująca dla System Tools Backends
 Name:		liboobs
-Version:	0.6.0
+Version:	2.17.92
 Release:	1
 License:	LGPL v2+
 Group:		Libraries
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/liboobs/0.6/%{name}-%{version}.tar.bz2
-# Source0-md5:	e78751943aa5eb160834a6278cc7fa18
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/liboobs/2.17/%{name}-%{version}.tar.bz2
+# Source0-md5:	5dfd1718dcc0b4e1ae77e83bc3fe7235
 URL:		http://www.gnome.org/
-BuildRequires:	dbus-glib-devel >= 0.71
-BuildRequires:	glib2-devel >= 1:2.12.4
-BuildRequires:	gtk-doc >= 1.7
+BuildRequires:	autoconf >= 2.52
+BuildRequires:	automake
+BuildRequires:	dbus-glib-devel >= 0.73
+BuildRequires:	glib2-devel >= 1:2.12.11
+BuildRequires:	gtk-doc >= 1.8
+BuildRequires:	libtool
 BuildRequires:	pkgconfig
-BuildRequires:	system-tools-backends >= 1.9.7
+BuildRequires:	system-tools-backends >= 2.1.2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -30,9 +33,9 @@ Summary:	Header files for liboobs library
 Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki liboobs
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
-Requires:	dbus-glib-devel >= 0.71
-Requires:	glib2-devel >= 1:2.12.4
-Requires:	system-tools-backends >= 1.9.7
+Requires:	dbus-glib-devel >= 0.73
+Requires:	glib2-devel >= 1:2.12.11
+Requires:	system-tools-backends >= 2.1.2
 
 %description devel
 Header files for liboobs library.
@@ -68,6 +71,10 @@ Dokumentacja API liboobs.
 %setup -q
 
 %build
+%{__libtoolize}
+%{__aclocal}
+%{__automake}
+%{__autoconf}
 %configure \
 	--enable-gtk-doc \
 	--with-html-dir=%{_gtkdocdir}
