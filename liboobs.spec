@@ -1,23 +1,23 @@
 Summary:	Wrapping library to the System Tools Backends
 Summary(pl.UTF-8):	Biblioteka opakowywująca dla System Tools Backends
 Name:		liboobs
-Version:	2.21.90
+Version:	2.21.91
 Release:	1
 License:	LGPL v2+
 Group:		Libraries
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/liboobs/2.21/%{name}-%{version}.tar.bz2
-# Source0-md5:	989c08372a6075c8b7861cf25cba20bc
+# Source0-md5:	f495cc1a465aebceda248018a36b72aa
 URL:		http://www.gnome.org/
 BuildRequires:	autoconf >= 2.52
 BuildRequires:	automake
-BuildRequires:	dbus-glib-devel >= 0.73
+BuildRequires:	dbus-glib-devel >= 0.74
 BuildRequires:	gettext-devel
 BuildRequires:	glib2-devel >= 1:2.14.0
 BuildRequires:	gtk-doc >= 1.8
-BuildRequires:	hal-devel >= 0.5.9
+BuildRequires:	hal-devel >= 0.5.10
 BuildRequires:	libtool
 BuildRequires:	pkgconfig
-BuildRequires:	system-tools-backends >= 2.5.7
+BuildRequires:	system-tools-backends >= 2.5.8
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -35,9 +35,9 @@ Summary:	Header files for liboobs library
 Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki liboobs
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
-Requires:	dbus-glib-devel >= 0.73
+Requires:	dbus-glib-devel >= 0.74
 Requires:	glib2-devel >= 1:2.14.0
-Requires:	hal-devel >= 0.5.9
+Requires:	hal-devel >= 0.5.10
 
 %description devel
 Header files for liboobs library.
