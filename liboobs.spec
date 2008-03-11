@@ -1,21 +1,23 @@
 Summary:	Wrapping library to the System Tools Backends
 Summary(pl.UTF-8):	Biblioteka opakowywująca dla System Tools Backends
 Name:		liboobs
-Version:	2.20.0
+Version:	2.22.0
 Release:	1
 License:	LGPL v2+
 Group:		Libraries
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/liboobs/2.20/%{name}-%{version}.tar.bz2
-# Source0-md5:	c0562e115af4777da471182b9d462b40
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/liboobs/2.22/%{name}-%{version}.tar.bz2
+# Source0-md5:	1b090ecd6c0df58b131795ff9a5c9057
 URL:		http://www.gnome.org/
 BuildRequires:	autoconf >= 2.52
 BuildRequires:	automake
-BuildRequires:	dbus-glib-devel >= 0.73
+BuildRequires:	dbus-glib-devel >= 0.74
+BuildRequires:	gettext-devel
 BuildRequires:	glib2-devel >= 1:2.14.0
 BuildRequires:	gtk-doc >= 1.8
+BuildRequires:	hal-devel >= 0.5.10
 BuildRequires:	libtool
 BuildRequires:	pkgconfig
-BuildRequires:	system-tools-backends >= 2.4.0
+BuildRequires:	system-tools-backends >= 2.6.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -33,9 +35,9 @@ Summary:	Header files for liboobs library
 Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki liboobs
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
-Requires:	dbus-glib-devel >= 0.73
+Requires:	dbus-glib-devel >= 0.74
 Requires:	glib2-devel >= 1:2.14.0
-Requires:	system-tools-backends >= 2.4.0
+Requires:	hal-devel >= 0.5.10
 
 %description devel
 Header files for liboobs library.
@@ -74,6 +76,7 @@ Dokumentacja API liboobs.
 %{__libtoolize}
 %{__aclocal}
 %{__automake}
+%{__autoheader}
 %{__autoconf}
 %configure \
 	--enable-gtk-doc \
@@ -95,18 +98,19 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS README
-%attr(755,root,root) %{_libdir}/lib*.so.*.*.*
+%attr(755,root,root) %{_libdir}/liboobs-1.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/liboobs-1.so.4
 
 %files devel
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/lib*.so
-%{_libdir}/lib*.la
-%{_includedir}/%{name}-1.0
-%{_pkgconfigdir}/*.pc
+%attr(755,root,root) %{_libdir}/liboobs-1.so
+%{_libdir}/liboobs-1.la
+%{_includedir}/liboobs-1.0
+%{_pkgconfigdir}/liboobs-1.pc
 
 %files static
 %defattr(644,root,root,755)
-%{_libdir}/lib*.a
+%{_libdir}/liboobs-1.a
 
 %files apidocs
 %defattr(644,root,root,755)
