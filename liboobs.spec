@@ -11,6 +11,7 @@ URL:		http://www.gnome.org/
 BuildRequires:	autoconf >= 2.52
 BuildRequires:	automake
 BuildRequires:	dbus-glib-devel >= 0.74
+BuildRequires:	docbook-dtd412-xml
 BuildRequires:	gettext-devel
 BuildRequires:	glib2-devel >= 1:2.14.0
 BuildRequires:	gtk-doc >= 1.8
