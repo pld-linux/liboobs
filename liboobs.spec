@@ -1,12 +1,12 @@
 Summary:	Wrapping library to the System Tools Backends
 Summary(pl.UTF-8):	Biblioteka opakowywująca dla System Tools Backends
 Name:		liboobs
-Version:	2.30.0
+Version:	2.30.1
 Release:	1
 License:	LGPL v2+
 Group:		Libraries
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/liboobs/2.30/%{name}-%{version}.tar.bz2
-# Source0-md5:	69ee6d329cd919c69aae3dae7302b796
+# Source0-md5:	65abd1254c63aea04fc1879c21e0051d
 URL:		http://www.gnome.org/
 BuildRequires:	autoconf >= 2.52
 BuildRequires:	automake
@@ -80,6 +80,7 @@ Dokumentacja API liboobs.
 %{__autoheader}
 %{__autoconf}
 %configure \
+	--disable-silent-rules \
 	--enable-gtk-doc \
 	--with-html-dir=%{_gtkdocdir}
 %{__make}
