@@ -1,12 +1,12 @@
 Summary:	Wrapping library to the System Tools Backends
 Summary(pl.UTF-8):	Biblioteka opakowywująca dla System Tools Backends
 Name:		liboobs
-Version:	2.30.1
+Version:	2.32.0
 Release:	1
 License:	LGPL v2+
 Group:		Libraries
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/liboobs/2.30/%{name}-%{version}.tar.bz2
-# Source0-md5:	65abd1254c63aea04fc1879c21e0051d
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/liboobs/2.32/%{name}-%{version}.tar.bz2
+# Source0-md5:	0bb40041b7227f9060ab51f3022115df
 URL:		http://www.gnome.org/
 BuildRequires:	autoconf >= 2.52
 BuildRequires:	automake
@@ -18,7 +18,7 @@ BuildRequires:	gtk-doc >= 1.8
 BuildRequires:	hal-devel >= 0.5.10
 BuildRequires:	libtool
 BuildRequires:	pkgconfig
-BuildRequires:	system-tools-backends >= 2.9.2
+BuildRequires:	system-tools-backends >= 2.10.1
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -101,7 +101,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS README
 %attr(755,root,root) %{_libdir}/liboobs-1.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/liboobs-1.so.4
+%attr(755,root,root) %ghost %{_libdir}/liboobs-1.so.*
 
 %files devel
 %defattr(644,root,root,755)
