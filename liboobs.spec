@@ -1,12 +1,12 @@
 Summary:	Wrapping library to the System Tools Backends
 Summary(pl.UTF-8):	Biblioteka opakowywująca dla System Tools Backends
 Name:		liboobs
-Version:	2.32.0
-Release:	2
+Version:	3.0.0
+Release:	1
 License:	LGPL v2+
 Group:		Libraries
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/liboobs/2.32/%{name}-%{version}.tar.bz2
-# Source0-md5:	0bb40041b7227f9060ab51f3022115df
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/liboobs/3.0/%{name}-%{version}.tar.bz2
+# Source0-md5:	fc3235b902a1cb7ac45776431004a57b
 URL:		http://www.gnome.org/
 BuildRequires:	autoconf >= 2.52
 BuildRequires:	automake
@@ -38,7 +38,6 @@ Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	dbus-glib-devel >= 0.74
 Requires:	glib2-devel >= 1:2.14.0
-Requires:	hal-devel >= 0.5.10
 
 %description devel
 Header files for liboobs library.
@@ -91,6 +90,8 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+%{__rm} $RPM_BUILD_ROOT%{_libdir}/*.la
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -106,7 +107,6 @@ rm -rf $RPM_BUILD_ROOT
 %files devel
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/liboobs-1.so
-%{_libdir}/liboobs-1.la
 %{_includedir}/liboobs-1.0
 %{_pkgconfigdir}/liboobs-1.pc
 
