@@ -1,5 +1,9 @@
+#
+# Conditional build:
+%bcond_with	hal	# HAL support
+#
 Summary:	Wrapping library to the System Tools Backends
-Summary(pl.UTF-8):	Biblioteka opakowywująca dla System Tools Backends
+Summary(pl.UTF-8):	Biblioteka opakowująca dla System Tools Backends
 Name:		liboobs
 Version:	3.0.0
 Release:	1
@@ -14,11 +18,15 @@ BuildRequires:	dbus-glib-devel >= 0.74
 BuildRequires:	docbook-dtd412-xml
 BuildRequires:	gettext-devel
 BuildRequires:	glib2-devel >= 1:2.14.0
-BuildRequires:	gtk-doc >= 1.8
-BuildRequires:	hal-devel >= 0.5.10
+BuildRequires:	gtk-doc >= 1.9
+%{?with_hal:BuildRequires:	hal-devel >= 0.5.10}
 BuildRequires:	libtool
 BuildRequires:	pkgconfig
-BuildRequires:	system-tools-backends >= 2.10.1
+BuildRequires:	system-tools-backends-devel >= 2.10.1
+Requires:	dbus-glib >= 0.74
+Requires:	glib2 >= 1:2.14.0
+%{?with_hal:Requires:	hal-libs >= 0.5.10}
+Suggests:	system-tools-backends >= 2.10.1
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -27,9 +35,10 @@ provides easy to access GObjects to system configuration details, like
 users, groups and network interfaces.
 
 %description -l pl.UTF-8
-Liboobs jest biblioteką opakowywującą dla System Tools Backends.
-Dostarcza łatwe interfejsy GObjects dla szczegółów konfiguracyjnych,
-takich jak użytkownicy, grupy, czy interfejsy sieciowe.
+Liboobs jest biblioteką opakowującą dla System Tools Backends.
+Dostarcza łatwo dostępne interfejsy GObject dla szczegółów
+konfiguracyjnych, takich jak użytkownicy, grupy, czy interfejsy
+sieciowe.
 
 %package devel
 Summary:	Header files for liboobs library
@@ -81,6 +90,7 @@ Dokumentacja API liboobs.
 %configure \
 	--disable-silent-rules \
 	--enable-gtk-doc \
+	%{?with_hal:--with-hal} \
 	--with-html-dir=%{_gtkdocdir}
 %{__make}
 
