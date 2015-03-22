@@ -6,7 +6,7 @@ Summary:	Wrapping library to the System Tools Backends
 Summary(pl.UTF-8):	Biblioteka opakowująca dla System Tools Backends
 Name:		liboobs
 Version:	3.0.0
-Release:	1
+Release:	2
 License:	LGPL v2+
 Group:		Libraries
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/liboobs/3.0/%{name}-%{version}.tar.bz2
