@@ -71,9 +71,7 @@ Summary:	liboobs API documentation
 Summary(pl.UTF-8):	Dokumentacja API liboobs
 Group:		Documentation
 Requires:	gtk-doc-common
-%if "%{_rpmversion}" >= "5"
 BuildArch:	noarch
-%endif
 
 %description apidocs
 liboobs API documentation.
