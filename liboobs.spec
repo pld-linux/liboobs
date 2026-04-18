@@ -6,12 +6,13 @@ Summary:	Wrapping library to the System Tools Backends
 Summary(pl.UTF-8):	Biblioteka opakowująca dla System Tools Backends
 Name:		liboobs
 Version:	3.0.0
-Release:	4
+Release:	5
 License:	LGPL v2+
 Group:		Libraries
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/liboobs/3.0/%{name}-%{version}.tar.bz2
 # Source0-md5:	fc3235b902a1cb7ac45776431004a57b
 Patch0:		liboobs-gtk-doc.patch
+Patch1:		time_t.patch
 URL:		http://www.gnome.org/
 BuildRequires:	autoconf >= 2.52
 BuildRequires:	automake
@@ -83,6 +84,7 @@ Dokumentacja API liboobs.
 %prep
 %setup -q
 %patch -P0 -p0
+%patch -P1 -p1
 
 %build
 %{__libtoolize}
@@ -114,12 +116,12 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS README
-%attr(755,root,root) %{_libdir}/liboobs-1.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/liboobs-1.so.5
+%{_libdir}/liboobs-1.so.*.*.*
+%ghost %{_libdir}/liboobs-1.so.5
 
 %files devel
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/liboobs-1.so
+%{_libdir}/liboobs-1.so
 %{_includedir}/liboobs-1.0
 %{_pkgconfigdir}/liboobs-1.pc
 

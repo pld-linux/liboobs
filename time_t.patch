@@ -1,0 +1,11 @@
+--- liboobs-3.0.0/oobs/oobs-timeconfig.c~	2010-02-15 15:36:06.000000000 +0100
++++ liboobs-3.0.0/oobs/oobs-timeconfig.c	2026-04-18 11:29:29.086667196 +0200
+@@ -366,7 +366,7 @@
+ 	       gint           *minute,
+ 	       gint           *second)
+ {
+-  glong unix_time;
++  time_t unix_time;
+   struct tm *tm;
+ 
+   g_return_if_fail (OOBS_IS_TIME_CONFIG (config));
